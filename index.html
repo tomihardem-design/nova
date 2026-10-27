@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f6f1">
+  <meta name="description" content="Descubrí perfumes, cosmética y cuidado personal en NØVA. Elegí tus favoritos y hacé tu pedido por WhatsApp.">
+  <title>NØVA | Perfumería & Beauty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">
+    DESCUBRÍ TU PRÓXIMA ESENCIA
+  </div>
+
+  <header class="header">
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <a class="logo" href="#">NØVA<span>.</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#catalogo" data-category-link="Perfumes">Perfumes</a>
+      <a href="#catalogo" data-category-link="Cuidado personal">Cuidado personal</a>
+    </nav>
+
+    <button class="cart-button" id="openCart" aria-label="Abrir carrito">
+      Bolsa <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">TU UNIVERSO DE BELLEZA</p>
+        <h1>Hay algo<br>especial en <em>vos.</em></h1>
+        <p class="hero-description">
+          Perfumes, belleza y pequeños rituales para disfrutar todos los días.
+          Encontrá eso que va con vos.
+        </p>
+        <a class="button button-dark" href="#catalogo">EXPLORAR COLECCIÓN <span>↗</span></a>
+        <p class="hero-note">UNA SELECCIÓN PARA VOS</p>
+      </div>
+
+      <div class="hero-image" role="img" aria-label="Perfumes y productos de belleza">
+        <div class="hero-image-label">
+          <span>THE BEAUTY EDIT</span>
+          <span>01 / NØVA</span>
+        </div>
+      </div>
+      <div class="hero-index">Nº 01 — BEAUTY & FRAGRANCE</div>
+    </section>
+
+    <section class="categories-section">
+      <div>
+        <p class="eyebrow">EXPLORÁ NØVA</p>
+        <h2>Encontrá tus favoritos.</h2>
+      </div>
+      <div class="category-list" id="categories">
+        <button class="category-chip active" data-category="Todos">Todo</button>
+        <button class="category-chip" data-category="Perfumes">Perfumes</button>
+        <button class="category-chip" data-category="Cosmética">Cosmética</button>
+        <button class="category-chip" data-category="Cuidado personal">Cuidado personal</button>
+        <button class="category-chip" data-category="Hogar">Aromas para el hogar</button>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="catalog-heading">
+        <div>
+          <p class="eyebrow">NUESTRA SELECCIÓN</p>
+          <h2>Productos destacados</h2>
+        </div>
+        <label class="search-box">
+          <span>⌕</span>
+          <input type="search" id="searchInput" placeholder="Buscar productos..." aria-label="Buscar productos">
+        </label>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state" id="emptyState" hidden>No encontramos productos con esa búsqueda.</p>
+    </section>
+
+    <section class="brand-note">
+      <p class="eyebrow">UN MOMENTO PARA VOS</p>
+      <h2>Tu esencia. Tu estilo.<br><em>Tu momento.</em></h2>
+      <p>Elegí tus favoritos y armá tu pedido a tu manera.</p>
+      <a class="button button-light" href="#catalogo">DESCUBRIR PRODUCTOS ↗</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo footer-logo" href="#">NØVA<span>.</span></a>
+    <p>Perfumería · Belleza · Cuidado personal</p>
+    <p class="copyright">© <span id="year"></span> NØVA. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <p class="eyebrow">TU SELECCIÓN</p>
+        <h2>Mi bolsa <span id="drawerCount">(0)</span></h2>
+      </div>
+      <button class="close-cart" id="closeCart" aria-label="Cerrar carrito">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-empty" id="cartEmpty">
+      <p>Tu bolsa está esperando.</p>
+      <span>Descubrí algo que te encante.</span>
+      <button class="button button-dark" id="continueShopping">EXPLORAR PRODUCTOS</button>
+    </div>
+
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total">
+        <span>Subtotal estimado</span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+      <p>El pedido se confirma por WhatsApp. El envío y la disponibilidad se coordinan por ese medio.</p>
+      <button class="button button-dark checkout-button" id="checkout">REALIZAR PEDIDO POR WHATSAPP ↗</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
